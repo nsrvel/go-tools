@@ -4,7 +4,6 @@ const (
 	ContentRepositoryFile = `package repository
 
 import (
-	"@gomod/internal/cms/@domain-lower/models"
 	"@gomod/pkg/infra/db"
 )
 
@@ -26,7 +25,6 @@ import (
 	"@gomod/config"
 	repo "@gomod/internal/wrapper/repository"
 	"@gomod/pkg/infra/db"
-	"github.com/gofiber/fiber/v2"
 	"github.com/sirupsen/logrus"
 )
 
@@ -54,7 +52,6 @@ func New@domain-capUsecase(repository repo.Repository, conf *config.Config, dbLi
 import (
 	"@gomod/config"
 	"@gomod/internal/wrapper/usecase"
-	"github.com/gofiber/fiber/v2"
 	"github.com/sirupsen/logrus"
 )
 
