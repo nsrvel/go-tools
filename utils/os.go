@@ -8,6 +8,7 @@ import (
 	"os"
 	"os/exec"
 	"path/filepath"
+	"regexp"
 	"runtime"
 
 	"golang.org/x/mod/modfile"
@@ -113,4 +114,10 @@ func RemoveContents(dir string) error {
 		return err
 	}
 	return nil
+}
+
+func DeleleLineContainSubstring(file string, substring string) string {
+	re := regexp.MustCompile("(?m)[\r\n]+^.*" + substring + ".*$")
+	res := re.ReplaceAllString(file, "")
+	return res
 }

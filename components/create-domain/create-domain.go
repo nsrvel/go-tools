@@ -18,7 +18,7 @@ func CreateDomain(workdir string, gomod string) error {
 
 	//* Display section category
 	category := section.CategorySection()
-	domain := section.GetDomainSection(workdir, category)
+	domain := section.GetNewDomainSection(workdir, category)
 
 	views.DisplayResetWithMessage("please wait", constants.ColorGreen)
 

@@ -33,7 +33,7 @@ reset:
 		goto reset
 	}
 
-	if featureID == "2" || featureID == "3" {
+	if featureID == "3" {
 		views.DisplayResetWithMessage(" sorry this feature under develpoment", constants.ColorYellow)
 		goto reset
 	}
